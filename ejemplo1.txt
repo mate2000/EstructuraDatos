@@ -1,0 +1,106 @@
+import java.util.*;
+
+class VentaDeBicicletas 
+{
+   public final static int NUM_SUCURSALES = 5;
+   private ArrayList<Bicicleta> Bicicletas;
+   private double [] gananciasSucursales;
+      
+   public VentaDeBicicletas ()
+   {
+       
+    /* TODO: Instanciar la lista y las sucursales */       
+
+   }
+   
+   public Bicicleta darBicicletaEnLaPosicion(int pos)
+   {
+      /* TODO: Entregar un Bicicleta en la posicion ingresada */       
+   }
+   
+   public double darGananciasDeSucursal( int numSucursal)
+   {
+      /* TODO: Entregar las ganancias de la sucursal ingresada */       
+   }
+   
+   public void agregarBicicleta(String codigo, String marca, int velocidadMaxima)
+   {
+      /* TODO: Agregar un nuevo Bicicleta a la lista */     
+   }
+   
+   public void registrarGananciasSucursal( int numSucursal, double ganancias)
+   {
+	  /* TODO: Asignar a una sucursal determinada las ganancias ingresadas */    
+   }
+}
+abstract class Bicicleta 
+{
+   private String codigo;
+   private String marca;
+   
+   public Bicicleta (String codigo, String marca)
+   {
+	  this.codigo = codigo;
+	  this.marca = marca;
+      
+   }
+   public String darMarca()
+   {
+      return marca;
+   }
+   
+   public String darCodigo()
+   {
+      return codigo;
+   }
+   
+   public abstract String darDescripcion();
+   /* TODO: Definir método abstracto para acelerar */    
+   /* TODO: Definir método abstracto para frenar */    
+}
+
+class BicicletaRuta extends Bicicleta{
+	
+	private int velocidadMaxima;
+	private int velocidad = 0;
+	
+	public BicicletaRuta(String codigo, String marca, int velocidadMaxima){
+	/* TODO: Asignar los valores de entrada a los atributos */    
+	}
+	
+	public String darDescripcion(){	
+    /* TODO: Retornar mensaje con el siguiente esquema:
+	Bicicleta con código C de la marca: M con velocidad máxima de: V
+	*/	
+	}
+	
+	/* TODO: Incrementar la velocidad actual en 5*/		
+	public void acelerar(){    
+	}
+	
+	/* TODO: Llevar la velocidad a cero*/	
+	public void frenar(){	
+	}
+	
+	
+}
+
+
+public class Main 
+{
+   public static void main (String [] args)
+   {
+      VentaDeBicicletas registroVentasBicicletas = new VentaDeBicicletas();
+      registroVentasBicicletas.agregarBicicleta("A001","GW",120);
+      registroVentasBicicletas.agregarBicicleta("A002","Victory",110);
+      registroVentasBicicletas.agregarBicicleta("A003","Trek",115);
+      registroVentasBicicletas.registrarGananciasSucursal(0, 20000.0);
+      registroVentasBicicletas.registrarGananciasSucursal(1, 20000.0);
+      registroVentasBicicletas.registrarGananciasSucursal(2, 28000.0);
+      /* TODO: reemplazar x por el valor adecuado*/	
+      System.out.println("La segunda Bicicleta registrada es de la marca "
+         + registroVentasBicicletas.darBicicletaEnLaPosicion(x).darMarca() + " y las ganancias de la tercera sucursal fueron "
+         + registroVentasBicicletas.darGananciasDeSucursal(x));
+   } 
+}
+
