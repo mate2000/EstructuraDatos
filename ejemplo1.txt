@@ -1,3 +1,12 @@
+/*
+
+Modificar las clases necesarias para obtener el numero total de 
+bicicletas registradas.
+
+Mostrar el promedio de ganancias de una sucursal
+
+*/
+
 import java.util.*;
 
 class VentaDeBicicletas 
